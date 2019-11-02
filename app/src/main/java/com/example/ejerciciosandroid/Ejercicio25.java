@@ -2,6 +2,7 @@ package com.example.ejerciciosandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,5 +22,11 @@ public class Ejercicio25 extends AppCompatActivity {
                 .getPath() + "/NarutoOpenning6.mp3");
         MediaPlayer mp = MediaPlayer.create(this, datos);
         mp.start();
+    }
+
+    public void volver(View view){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
