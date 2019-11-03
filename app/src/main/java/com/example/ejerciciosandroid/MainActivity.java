@@ -25,17 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
             if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                     Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-
             } else {
-
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                         MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
-
             }
         }
-
-
     }
 
     @Override
@@ -77,6 +72,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void ejercicio33(View view){
         Intent intent = new Intent(getApplicationContext(), Ejercicio33.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void ejercicio26(View view){
+        Intent intent = new Intent(getApplicationContext(), Ejercicio26.class);
         startActivity(intent);
         finish();
     }

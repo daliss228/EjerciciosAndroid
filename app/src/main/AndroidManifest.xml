@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ejerciciosandroid">
-    
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +17,7 @@
 
         <activity android:name=".Ejercicio48" />
         <activity android:name=".Ejercicio33" />
+        <activity android:name=".Ejercicio26" />
         <activity android:name=".Ejercicio15" />
         <activity android:name=".Ejercicio25" />
         <activity android:name=".Ejercicio13" />
