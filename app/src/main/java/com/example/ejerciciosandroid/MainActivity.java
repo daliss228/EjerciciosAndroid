@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 return;
             }
+
         }
     }
 
@@ -71,6 +72,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void ejercicio25(View view){
         Intent intent = new Intent(getApplicationContext(), Ejercicio25.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void ejercicio26(View view){
+        Intent intent = new Intent(getApplicationContext(), Ejercicio26.class);
         startActivity(intent);
         finish();
     }
