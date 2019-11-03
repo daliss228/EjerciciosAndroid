@@ -20,6 +20,12 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    public void ejercicio15(View view){
+        Intent intent = new Intent(getApplicationContext(), Ejercicio15.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void ejercicio25(View view){
         Intent intent = new Intent(getApplicationContext(), Ejercicio25.class);
         startActivity(intent);
