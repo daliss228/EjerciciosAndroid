@@ -47,7 +47,8 @@
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:onClick="ejercicio33"
+            android:text="Dibujar Circulo" />
 
         <Button
             android:id="@+id/button6"
@@ -59,7 +60,8 @@
             android:id="@+id/button7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:onClick="ejercicio48"
+            android:text="Contactos telefónicos" />
 
         <Button
             android:id="@+id/button8"

@@ -18,8 +18,7 @@ public class Ejercicio25 extends AppCompatActivity {
     }
 
     public void reproducir(View v) {
-        Uri datos = Uri.parse(Environment.getExternalStorageDirectory()
-                .getPath() + "/NarutoOpenning6.mp3");
+        Uri datos = Uri.parse(Environment.getExternalStorageDirectory().getPath() + "/storage/self/primary/naruto.mp3");
         MediaPlayer mp = MediaPlayer.create(this, datos);
         mp.start();
     }
