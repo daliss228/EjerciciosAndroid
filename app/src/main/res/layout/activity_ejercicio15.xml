@@ -16,12 +16,13 @@
 
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/edtNomb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Ingrese el nombre del archivo"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:layout_centerInParent="true"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,6 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="guardar"
                 android:text="Guardar" />
 
             <Button
@@ -44,13 +46,14 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/edtGrand"
             android:layout_width="match_parent"
             android:layout_height="285dp"
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
-            android:background="#e0af1f"/>
+            android:background="#e0af1f"
+            android:layout_centerInParent="true"/>
 
 
     </LinearLayout>
