@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.Menu;
 import android.view.View;
 
 public class Ejercicio25 extends AppCompatActivity {
@@ -18,7 +19,7 @@ public class Ejercicio25 extends AppCompatActivity {
     }
 
     public void reproducir(View v) {
-        Uri datos = Uri.parse(Environment.getExternalStorageDirectory().getPath() + "/storage/self/primary/naruto.mp3");
+        Uri datos = Uri.parse(Environment.getExternalStorageDirectory().getPath() + "/emulated/0/naruto.mp3");
         MediaPlayer mp = MediaPlayer.create(this, datos);
         mp.start();
     }
