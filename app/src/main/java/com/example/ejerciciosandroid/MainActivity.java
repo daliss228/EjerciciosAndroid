@@ -5,18 +5,24 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+
     private static final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 1 ;
+    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        preferences = getSharedPreferences("Login", Context.MODE_PRIVATE);
+
         int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
         if (ContextCompat.checkSelfPermission(this,
@@ -76,11 +82,18 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    public void ejercicio39 (View view){
+        Intent intent = new Intent(getApplicationContext(), Ejercicio33.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void ejercicio26(View view){
         Intent intent = new Intent(getApplicationContext(), Ejercicio26.class);
         startActivity(intent);
         finish();
     }
+
 
     public void ejercicio48(View view){
         Intent intent = new Intent(getApplicationContext(), Ejercicio48.class);
@@ -88,9 +101,24 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    /*public void miniproyecto(View view){
-        Intent intent = new Intent(getApplicationContext(), MiniProyecto.class);
+    public void ejercicio50(View view){
+        Intent intent = new Intent(getApplicationContext(), Ejercicio50.class);
         startActivity(intent);
         finish();
-    }*/
+    }
+
+    public void miniproyecto(View view){
+
+        if(preferences.contains("Puser")){
+            Intent intent = new Intent(getApplicationContext(), MiniProyecto.class);
+            startActivity(intent);
+            finish();
+        }else{
+            Intent intent = new Intent(getApplicationContext(), LoginMiniProyecto.class);
+            startActivity(intent);
+            finish();
+        }
+
+    }
+
 }
