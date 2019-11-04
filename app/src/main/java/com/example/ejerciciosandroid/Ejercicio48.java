@@ -33,7 +33,7 @@ public class Ejercicio48 extends AppCompatActivity {
         lv1=(ListView)findViewById(R.id.listView);
         lv1.setAdapter(adaptador1);
 
-        et1=(EditText)findViewById(R.id.editText);
+        et1=(EditText)findViewById(R.id.txtuser);
 
         lv1.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override

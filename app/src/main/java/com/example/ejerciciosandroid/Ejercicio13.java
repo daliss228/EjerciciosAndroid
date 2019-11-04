@@ -21,7 +21,7 @@ public class Ejercicio13 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ejercicio13);
 
-        editText = (EditText)findViewById(R.id.editText);
+        editText = (EditText)findViewById(R.id.txtuser);
         textView2 = (TextView)findViewById(R.id.textView2);
         num1 = (int) (Math.random() * 50 + 1);
         SharedPreferences prefe = getSharedPreferences("datos", Context.MODE_PRIVATE);

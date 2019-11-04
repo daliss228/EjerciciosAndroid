@@ -87,4 +87,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    /*public void miniproyecto(View view){
+        Intent intent = new Intent(getApplicationContext(), MiniProyecto.class);
+        startActivity(intent);
+        finish();
+    }*/
 }
