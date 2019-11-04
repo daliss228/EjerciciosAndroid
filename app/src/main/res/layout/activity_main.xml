@@ -56,7 +56,8 @@
             android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:onClick="ejercicio39"
+            android:text="Event Touch: Dibujar un circulo" />
 
         <Button
             android:id="@+id/button7"

@@ -23,7 +23,7 @@ public class Ejercicio26 extends AppCompatActivity {
         try{
             //Probar con un enlace de música
 
-            mp.setDataSource("http://192.168.100.230/ej26/musica/Liam-Payne-J-Balvin-Familiar-0.mp3");
+            mp.setDataSource("https://daliss228.000webhostapp.com/naruto.mp3");
             mp.prepare();
             mp.start();
         } catch (IOException e) {
