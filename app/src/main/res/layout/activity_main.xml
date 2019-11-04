@@ -70,7 +70,8 @@
             android:id="@+id/button8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:onClick="ejercicio50"
+            android:text="TOMAR UNA FOTO Y GRABARLA EN UN ARCHIVO" />
 
         <Button
             android:id="@+id/button9"
