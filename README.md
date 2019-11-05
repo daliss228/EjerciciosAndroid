@@ -1,8 +1,7 @@
 # EjerciciosAndroid
-===================================
 Integrantes:
 -----------------------------------
-  Héctor Analuisa
+  Héctor Analuisa, 
   Dayana Rodríguez
 
 Ejercicios: 13, 15, 25, 26, 33, 39, 48, 50, mini proyecto*
