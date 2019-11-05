@@ -31,9 +31,15 @@ public class LoginMiniProyecto extends AppCompatActivity {
     public void iniciarSesion(View view) {
         String user = username.getText().toString();
         String pass = password.getText().toString();
+        String user1, pass1;
 
-        String user1 = preferences.getString("Puser", "null");
-        String pass1 = preferences.getString("Ppass", "null");
+        if(comprobar()){
+            user1 = preferences.getString("Puser1", "null");
+            pass1 = preferences.getString("Ppass1", "null");
+        }else{
+            user1 = preferences.getString("Puser", "null");
+            pass1 = preferences.getString("Ppass", "null");
+        }
 
         if (user.equals(user1) && pass.equals(pass1)) {
             Toast.makeText(this, "Usuario correcto!", Toast.LENGTH_SHORT);
@@ -47,5 +53,13 @@ public class LoginMiniProyecto extends AppCompatActivity {
         Intent intent = new Intent(LoginMiniProyecto.this, RegisterMiniProyecto.class);
         startActivity(intent);
         finish();
+    }
+
+    public boolean comprobar(){
+        if(preferences.contains("Puser")){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

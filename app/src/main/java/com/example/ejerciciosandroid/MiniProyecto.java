@@ -2,6 +2,7 @@ package com.example.ejerciciosandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -83,13 +84,10 @@ public class MiniProyecto extends AppCompatActivity {
                 posicion++;
                 vectormp[posicion].start();
                 CambioPortada();
-
-
             }else{
                 posicion++;
                 CambioPortada();
             }
-
         }else{
             Leyendas("No hay más canciones");
         }
@@ -110,16 +108,10 @@ public class MiniProyecto extends AppCompatActivity {
                 posicion--;
                 CambioPortada();
             }
-
-
-
         }else{
             Leyendas("NO hay más canciones");
         }
     }
-
-
-
 
     public void Leyendas(String leyenda){
         Toast.makeText(this, leyenda, Toast.LENGTH_SHORT).show();
@@ -132,6 +124,13 @@ public class MiniProyecto extends AppCompatActivity {
         }else if (posicion == 2){
             iv.setImageResource(R.drawable.portada3);
         }
+    }
+
+    public void cerrarSesion(View views){
+        Toast.makeText(this, "Usuario resgistrado!", Toast.LENGTH_SHORT);
+        Intent intent = new Intent(MiniProyecto.this, LoginMiniProyecto.class);
+        startActivity(intent);
+        finish();
     }
 
 }

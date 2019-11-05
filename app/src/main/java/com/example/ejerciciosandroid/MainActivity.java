@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void miniproyecto(View view){
 
-        if(preferences.contains("Puser")){
+        if(preferences.contains("Puser")||preferences.contains("Puser1")){
             Intent intent = new Intent(getApplicationContext(), MiniProyecto.class);
             startActivity(intent);
             finish();

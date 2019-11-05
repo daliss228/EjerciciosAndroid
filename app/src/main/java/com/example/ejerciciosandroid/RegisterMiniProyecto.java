@@ -36,6 +36,16 @@ public class RegisterMiniProyecto extends AppCompatActivity {
 
         if(!usuario.equals("")&&!email.equals("")&&!password.equals("")){
             //if(password.length() >= 6){
+            if(comprobar()){
+                editor.putString("Puser1", usuario);
+                editor.putString("Pemail1", email);
+                editor.putString("Ppass1", password);
+                editor.commit();
+                Toast.makeText(this, "Usuario resgistrado!", Toast.LENGTH_SHORT);
+                Intent intent = new Intent(RegisterMiniProyecto.this, LoginMiniProyecto.class);
+                startActivity(intent);
+                finish();
+            }else{
                 editor.putString("Puser", usuario);
                 editor.putString("Pemail", email);
                 editor.putString("Ppass", password);
@@ -45,11 +55,18 @@ public class RegisterMiniProyecto extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             //}else{
-                Toast.makeText(this, "El password debe tener al menos 6 caracteres!", Toast.LENGTH_SHORT);
+                //Toast.makeText(this, "El password debe tener al menos 6 caracteres!", Toast.LENGTH_SHORT);
             //}
+            }
         }else{
             Toast.makeText(this, "Llene todos los campos!", Toast.LENGTH_SHORT);
         }
-
+    }
+    public boolean comprobar(){
+        if(preferences.contains("Puser")){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
